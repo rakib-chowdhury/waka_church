@@ -1122,7 +1122,7 @@ var frd_cat = $('#frd_cat').val();
 <!-- Light Box Js --> 
 <script>
   $(document).ready(function(){  
-      $('#event_date,#top_event_date').datetimepicker({
+      $('#top_event_date').datetimepicker({
         timepicker:true,
         format:'Y-m-d h:i:s',
         formatDate:'YYYY-MM-DD H:i:s',
@@ -1148,7 +1148,7 @@ var frd_cat = $('#frd_cat').val();
 <!-- from evenr date -->
 <script>
   $(document).ready(function(){  
-      $('#event_date,#from_event_date').datetimepicker({
+      $('#from_event_date').datetimepicker({
         timepicker:true,
         format:'Y-m-d h:i:s',
         formatDate:'YYYY-MM-DD H:i:s',
@@ -1161,20 +1161,14 @@ var frd_cat = $('#frd_cat').val();
         formatDate:'YYYY-MM-DD',
         minDate:new Date(),
         closeOnDateSelect: true
-      });      
-      // $('#event_start,#event_end,#top_event_start,#top_event_end').datetimepicker({
-      //   datepicker:false,
-      //   format: "h:i A",
-      //   formatTime:'h:i A',
-      //   step:5
-      //   });     
+      });
     });
 
 </script>
 <!-- to event date  -->
 <script>
   $(document).ready(function(){  
-      $('#event_date,#to_event_date').datetimepicker({
+      $('#to_event_date').datetimepicker({
         timepicker:true,
         format:'Y-m-d h:i:s',
         formatDate:'YYYY-MM-DD H:i:s',
@@ -1187,14 +1181,7 @@ var frd_cat = $('#frd_cat').val();
         formatDate:'YYYY-MM-DD',
         minDate:new Date(),
         closeOnDateSelect: true
-      });      
-      // $('#event_start,#event_end,#top_event_start,#top_event_end').datetimepicker({
-      //   datepicker:false,
-      //   format: "h:i A",
-      //   formatTime:'h:i A',
-      //   step:5
-      //   }); 
-         
+      });
       $(document).on('click', '.fa-window-close', function(e) {
          e.preventDefault();
          $(this).closest('.owl-item').remove();
@@ -1203,57 +1190,6 @@ var frd_cat = $('#frd_cat').val();
     });
 
 </script>
-
-<!-- <script>
-    $('select').SelectBox();
-    var select = new SelectBox($('#favorites'));
-    $('#btn-readonly').click(function() {
-      select.readonly = !select.readonly;
-    });
-
-    $('#btn-disabled').click(function() {
-      select.disabled = !select.disabled;
-    });
-
-    $('#btn-multiple').click(function() {
-      select.multiple = !select.multiple;
-    });
-
-    $('#btn-render').click(function() {
-      select.renderSelectBox();
-    });
-
-    $('#btn-show').click(function(event) {
-      select.show(event);
-    });
-
-    $('#btn-hide').click(function() {
-      select.hide();
-    });
-
-    $('#btn-destroy').click(function() {
-      select.destroy();
-    });
-
-    function change(select) {
-      console.log('onchange', select);
-    }
-
-    $('#favorites').change(function(event) {
-      console.log(event.target);
-    })
-
-    setTimeout(function() {
-      // 通过数据设置select
-      select.options = [
-        { label: 'A1', value: 'a1' },
-        { label: 'News'},
-        { label: 'Domestic News', value: 'news-1', inGroup: true },
-        { label: 'International News', value: 'news-2', inGroup: true },
-        { label: 'A2', value: 'A2' }
-      ];
-    }, 5000);
-</script> -->
         
 </body>
 </html>

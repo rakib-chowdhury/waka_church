@@ -6,7 +6,8 @@ class Add_Event extends CI_Controller {
  		$this->load->model('common_model'); 				
 	}
 
-	public function index(){ 
+	public function index(){
+	    //echo 'yes';die();
 		if(!$this->session->userdata('user_sess_data')){
 			redirect(base_url('home'), 'refresh');
 		} 		
@@ -25,7 +26,7 @@ class Add_Event extends CI_Controller {
 				$thumbnail_path = $this->do_upload($_FILES['event_image']['name'],"event_image","event");
 			}
 			//**********************														
-
+            //echo '<pre>';print_r($_POST);die();
 			$data = array(
 				'user_id' => $this->input->post('user_id'),
 				'event_name' => $this->input->post('event_name'),

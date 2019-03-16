@@ -200,7 +200,7 @@ $user_sess_data = $this->session->userdata('user_sess_data');?>
 
                       <div class="form-group">
 
-                        <label for="Starting by">Starting By</label>
+                        <label for="Starting by">Start Time</label>
 
                         <input type="text" class="form-control" placeholder="Start Time" name="event_start" id="event_start">
 
@@ -212,7 +212,7 @@ $user_sess_data = $this->session->userdata('user_sess_data');?>
 
                       <div class="form-group">
 
-                        <label for="Ending By">Ending By</label>
+                        <label for="Ending By">End Time</label>
 
                         <input type="text" class="form-control" placeholder="End Time" name="event_end" id="event_end">
 
@@ -234,7 +234,7 @@ $user_sess_data = $this->session->userdata('user_sess_data');?>
 
                       <div class="form-group">
 
-                        <input type="text" class="form-control" placeholder="Host(s)" name="host">
+                        <input type="text" class="form-control" placeholder="Hosted By" name="host">
 
                       </div>
 
@@ -285,6 +285,13 @@ $user_sess_data = $this->session->userdata('user_sess_data');?>
   //register form  
 
   $(document).ready(function() {
+      $('#event_date').datetimepicker({
+          timepicker:false,
+          format:'Y-m-d',
+          formatDate:'YYYY-MM-DD',
+          minDate:new Date(),
+          closeOnDateSelect: true
+      });
 
     $("form#add_event_frm").validate({
 
